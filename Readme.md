@@ -3,6 +3,7 @@ Index Engine
 
 Dependencies
 ----------------------
+
 Running under python 2.7 and OSX 10.6
 
 Usage
@@ -12,7 +13,7 @@ Usage
 
 under project directory:
 
-  $ python builder.py [filename]
+    $ python builder.py [filename]
 
 accepted file is nz2.tar and nz10.tar (compressed html file under .nz domain)
 
@@ -21,11 +22,11 @@ accepted file is nz2.tar and nz10.tar (compressed html file under .nz domain)
 after the index file: rindex is built
 you can start the analyzer by command:
 
-  $ python analyzer.py
+    $ python analyzer.py
 
 this will prompt the message:
 
-  please input search query: 
+    please input search query: 
 
 after enter the query and press enter,
 the program will return top 10 return result for the query.
@@ -46,7 +47,7 @@ cparser.parse(url,html)
 create urltable file for url id reference
 reduce the data into reverted-index as format :
 
-  ( [word] [count] [urlid] )
+    ( [word] [count] [urlid] )
 
 sort the reverted-index data and save in tmp/index_[id] file for future process
 
@@ -81,16 +82,16 @@ calculate the BM score of the word matching,
 repeat the calculation for each word in query,
 return the top 10 url to user.
 
-+builder_spec.py
++ builder_spec.py
 
 Test cases for builder, make sure the urltable and parsing function can work correctly,
 can execute by
 
-  $ python builder_spec.py
+    $ python builder_spec.py
 
 or run in the unittest module
 
-  $ python -m unittest builder_spec.BuilderSpec
+    $ python -m unittest builder_spec.BuilderSpec
 
 What have been done
 -------------------
